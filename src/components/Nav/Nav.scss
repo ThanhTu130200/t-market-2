@@ -1,0 +1,22 @@
+.navbar {
+	.container {
+		.navHeader {
+			font-size: 32px;
+			margin: 12px 0;
+			cursor: pointer;
+		}
+
+		.navCollapse {
+			flex-grow: 0;
+
+			a {
+				margin: 0 10px;
+			}
+
+			.navAboutUs {
+				font-style: 20;
+				font-weight: 600;
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.carousel-caption {
+	bottom: 30vh;
+	top: 30vh;
+	.card {
+		background-color: rgba(255, 255, 255, 0.8);
+		.checkItOutBtn {
+			position: absolute;
+			bottom: 5vh;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 12px 35px;
+		}
+	}
+}
