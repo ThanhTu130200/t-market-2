@@ -1,21 +1,30 @@
 .navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
 	.container {
-		.navHeader {
-			font-size: 32px;
+		.nav__header {
 			margin: 12px 0;
 			cursor: pointer;
 		}
 
-		.navCollapse {
+		.nav__collapse {
 			flex-grow: 0;
 
 			a {
 				margin: 0 10px;
 			}
 
-			.navAboutUs {
-				font-style: 20;
+			.nav__aboutUs {
 				font-weight: 600;
+			}
+
+			.nav__cart--badge {
+				position: absolute;
+				top: -2px;
+				right: -6px;
 			}
 		}
 	}

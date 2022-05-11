@@ -1,5 +1,4 @@
 import React from "react"
-
 import { Carousel, Card, Button } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 

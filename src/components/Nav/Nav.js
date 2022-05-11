@@ -1,20 +1,23 @@
 import React from "react"
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container, Badge } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
+import { useSelector } from "react-redux"
 
 import "./Nav.scss"
 
 export default function NavComponent() {
+	const cart = useSelector((state) => state.cart)
+
 	return (
-		<Navbar bg="light" expand="lg">
+		<Navbar bg="light" expand="lg" className="position-fixed">
 			<Container>
 				<LinkContainer to="/">
-					<Navbar.Brand as="h1" to="/" href="/" className="navHeader">
+					<Navbar.Brand as="h1" to="/" href="/" className="nav__header fs-2">
 						t-Market
 					</Navbar.Brand>
 				</LinkContainer>
 				<Navbar.Toggle aria-controls="navbarScroll" />
-				<Navbar.Collapse id="navbarScroll" className="navCollapse">
+				<Navbar.Collapse id="navbarScroll" className="nav__collapse">
 					<Nav className=" my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
 						<LinkContainer to="/store">
 							<Nav.Link>
@@ -29,20 +32,23 @@ export default function NavComponent() {
 								</svg>
 							</Nav.Link>
 						</LinkContainer>
-						<LinkContainer to="/cart">
+						<LinkContainer to="/cart" className="position-relative">
 							<Nav.Link>
 								<svg
+									className="bi bi-cart"
 									xmlns="http://www.w3.org/2000/svg"
 									width="26"
 									height="26"
 									fill="currentColor"
-									className="bi bi-cart"
 									viewBox="0 0 16 16">
 									<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
 								</svg>
+								<Badge pill bg="secondary" className="nav__cart--badge bg-primary">
+									{cart.length}
+								</Badge>
 							</Nav.Link>
 						</LinkContainer>
-						<LinkContainer to="/about" className="mt-1 navAboutUs">
+						<LinkContainer to="/about" className="mt-1 fs-6 nav__aboutUs">
 							<Nav.Link>About Us</Nav.Link>
 						</LinkContainer>
 					</Nav>
