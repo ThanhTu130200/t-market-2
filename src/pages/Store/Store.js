@@ -9,7 +9,9 @@ export default function Store() {
 	return (
 		<div>
 			<DefaultLayout>
-				<h1 className="fs-2 mt-5 text-center">Store</h1>
+				<h1 className="fs-2 text-center" style={{ marginTop: "150px" }}>
+					STORE
+				</h1>
 				<Products products={products} />
 			</DefaultLayout>
 		</div>
