@@ -11,7 +11,7 @@ export default function CarouselComponent() {
 		<div>
 			<Carousel>
 				{products.map((product) => (
-					<Carousel.Item interval={3000} key={product.id}>
+					<Carousel.Item interval={3000} key={product.id} className="carouselItem">
 						<img
 							className="d-block w-100"
 							src={product.image}
@@ -19,7 +19,7 @@ export default function CarouselComponent() {
 							style={{ height: "100vh", objectFit: "cover" }}
 						/>
 						<Carousel.Caption>
-							<Card className="text-black" style={{ height: "40vh" }}>
+							<Card className="text-black carouselItem__card">
 								<Card.ImgOverlay>
 									<Card.Title className="fs-1">{product.name}</Card.Title>
 									<Card.Text className="fs-4 color-primary">
