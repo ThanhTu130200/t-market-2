@@ -29,3 +29,17 @@
 		}
 	}
 }
+
+@media (max-width: 575px) {
+	.navbar {
+		.container {
+			.nav__collapse {
+				.nav__cart--badge {
+					top: 0px;
+					right: unset;
+					left: 20px;
+				}
+			}
+		}
+	}
+}
