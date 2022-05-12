@@ -110,8 +110,12 @@ export default function Cart() {
 																		</svg>
 																	</button>
 																</div>
-																<div className="col-md-3 col-lg-2 col-xl-2 p-0">
-																	<h6 className="mb-0">
+																<Col className="col-md-3 col-lg-2 col-xl-2">
+																	<h6
+																		className="mb-0"
+																		style={{
+																			minWidth: "85px",
+																		}}>
 																		{item.price.toLocaleString(
 																			"en-US",
 																			{
@@ -120,7 +124,7 @@ export default function Cart() {
 																			}
 																		)}
 																	</h6>
-																</div>
+																</Col>
 																<div
 																	className="col-md-1 col-lg-1 col-xl-1 text-center text-muted cursor-pointer"
 																	onClick={() =>
@@ -166,10 +170,10 @@ export default function Cart() {
 														<div className="mb-4 pb-2">
 															<select className="select">
 																<option value="1">
-																	Standard-Delivery- $5.00
+																	Standard Delivery - $5.00
 																</option>
 																<option value="2">
-																	Fast-Delivery- $5.00
+																	Fast Delivery - $5.00
 																</option>
 															</select>
 														</div>
